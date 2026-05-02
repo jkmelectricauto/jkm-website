@@ -24,7 +24,7 @@ function Dealership() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5001/submit-lead", {
+      const response = await fetch("/submit-lead", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

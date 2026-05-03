@@ -12,6 +12,7 @@ import HydraulicDifferential from "./pages/HydraulicDifferential";
 import FrontFork from "./pages/FrontFork";
 import ElectricRickshaw from "./pages/ElectricRickshaw";
 import FloatingButtons from "./components/FloatingButtons";
+import ThankYou from "./pages/ThankYou";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/hydraulic-differential" element={<HydraulicDifferential />} />
         <Route path="/front-fork" element={<FrontFork />} />
         <Route path="/electric-rickshaw" element={<ElectricRickshaw />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
 
       <FloatingButtons />

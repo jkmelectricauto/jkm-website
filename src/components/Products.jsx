@@ -19,7 +19,7 @@ function Products() {
       title: "Electric Rickshaw",
       desc: "Reliable EV vehicle designed for Indian roads with performance and comfort.",
       link: "/electric-rickshaw",
-      img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+      img: "/Users/mohit/jkm-website/public/images/e-auto.jpeg",
     },
   ];
 

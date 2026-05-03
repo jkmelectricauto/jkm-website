@@ -2,6 +2,31 @@ import React, { useState } from "react";
 
 function Dealership() {
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      setSubmitted(true);
+      form.reset();
+
+    } catch (error) {
+      alert("Something went wrong");
+    }
+
+    setLoading(false);
+  };
 
   return (
     <section className="py-24 bg-gray-50">
@@ -30,7 +55,7 @@ function Dealership() {
           </div>
         </div>
 
-        {/* Right Form */}
+        {/* Form */}
         <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Send Inquiry
@@ -40,9 +65,10 @@ function Dealership() {
             name="dealer-form"
             method="POST"
             data-netlify="true"
-            action="/thank-you"  // ✅ FIXED HERE
+            onSubmit={handleSubmit}
             className="space-y-4"
           >
+            <input type="hidden" name="form-name" value="dealer-form" />
 
             <input
               type="text"
@@ -93,9 +119,12 @@ function Dealership() {
               disabled={loading}
               className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold"
             >
-              Submit Inquiry
+              {loading
+                ? "Submitting..."
+                : submitted
+                ? "Submitted ✅"
+                : "Submit Inquiry"}
             </button>
-
           </form>
         </div>
 

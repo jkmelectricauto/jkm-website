@@ -3,10 +3,6 @@ import React, { useState } from "react";
 function Dealership() {
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
-    setLoading(true);
-  };
-
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -41,14 +37,12 @@ function Dealership() {
           </h3>
 
           <form
-              name="dealer-form"
-              method="POST"
-              data-netlify="true"
-              action="/thank-you"
-              className="space-y-4"
-            >
-            {/* Required hidden input */}
-            <input type="hidden" name="form-name" value="dealer-form" />
+            name="dealer-form"
+            method="POST"
+            data-netlify="true"
+            action="/thank-you"
+            className="space-y-4"
+          >
 
             <input
               type="text"
@@ -99,7 +93,7 @@ function Dealership() {
               disabled={loading}
               className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold"
             >
-              {loading ? "Submitting..." : "Submit Inquiry"}
+              Submit Inquiry
             </button>
 
           </form>

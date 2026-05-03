@@ -2,9 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/png" href="/favicon.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
@@ -15,37 +12,22 @@
       name="description"
       content="JKM Electric Automobiles Pvt Ltd is a premium manufacturer of Hydraulic Differential, Front Fork, Electric Rickshaw and EV spare parts in India."
     />
-
-    <meta
-      name="keywords"
-      content="Hydraulic Differential, E Rickshaw Parts, Front Fork Manufacturer, Electric Auto, EV Spare Parts India"
-    />
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "JKM Electric Automobiles Pvt Ltd",
-        "url": "https://yourdomain.com",
-        "logo": "https://yourdomain.com/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-92114242765",
-          "contactType": "customer service"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New Delhi",
-          "addressCountry": "India"
-        }
-      }
-    </script>
-
   </head>
 
   <body>
+
+    <!-- 🔥 NETLIFY FORM DETECTION (IMPORTANT) -->
+    <form name="dealer-form" data-netlify="true" hidden>
+      <input type="text" name="full_name" />
+      <input type="text" name="company_name" />
+      <input type="text" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="city" />
+      <textarea name="requirement"></textarea>
+    </form>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

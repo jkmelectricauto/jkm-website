@@ -51,7 +51,7 @@ function Hero() {
           <div className="absolute inset-0 bg-blue-200 blur-3xl opacity-40 rounded-full"></div>
 
           <img
-            src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?auto=format&fit=crop&w=900&q=80"
+            src="https://scontent-del3-1.xx.fbcdn.net/v/t39.30808-6/670148241_122221526162283370_6385073869020673714_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=V4EDTgQfxjsQ7kNvwHvh-Vl&_nc_oc=AdoRF0f5QJEQSJFRQhUbVr-13Z_nct-dHZhn_mmxHWL6cYZMCInyWxhERhGpEI7cmng&_nc_zt=23&_nc_ht=scontent-del3-1.xx&_nc_gid=v5RZczY8qPuoWx05iUj67A&_nc_ss=7b2a8&oh=00_Af6UTSTy1bZKwnrdnsvmLVjzi2Z-PfeMNTIof_PjStz0Jg&oe=69FD6B0F"
             alt="Electric Vehicle"
             className="relative rounded-3xl shadow-2xl w-full object-cover h-[550px]"
           />

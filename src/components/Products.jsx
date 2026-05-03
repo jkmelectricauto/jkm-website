@@ -16,7 +16,7 @@ function Products() {
       img: "https://5.imimg.com/data5/SELLER/Default/2026/3/594784103/GX/AQ/KE/59973535/front-fork-chimta-l5-l3-1000x1000.png",
     },
     {
-      title: "Electric Rickshaw",
+      title: "Electric Auto",
       desc: "Reliable EV vehicle designed for Indian roads with performance and comfort.",
       link: "/electric-rickshaw",
       img: "https://5.imimg.com/data5/SELLER/Default/2026/3/589188452/RO/XT/AN/59973535/f4-jpeg-1000x1000.jpeg",

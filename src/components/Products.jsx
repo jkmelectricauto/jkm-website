@@ -7,7 +7,7 @@ function Products() {
       title: "Hydraulic Differential",
       desc: "OEM grade high-strength differential for electric rickshaw with smooth performance and durability.",
       link: "/hydraulic-differential",
-      img: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3",
+      img: "https://5.imimg.com/data5/SELLER/Default/2026/3/589188941/YB/DP/EO/59973535/gemini-generated-image-jxpmxcjxpmxcjxpm-png-1000x1000.png",
     },
     {
       title: "Front Fork Dual Suspension",

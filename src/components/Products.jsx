@@ -13,7 +13,7 @@ function Products() {
       title: "Front Fork Dual Suspension",
       desc: "Hydraulic and mechanical brake variants with strong stability and road control.",
       link: "/front-fork",
-      img: "https://images.unsplash.com/photo-1558981806-ec527fa84c39",
+      img: "https://5.imimg.com/data5/SELLER/Default/2026/3/594784103/GX/AQ/KE/59973535/front-fork-chimta-l5-l3-1000x1000.png",
     },
     {
       title: "Electric Rickshaw",

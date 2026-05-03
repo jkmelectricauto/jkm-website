@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ import ThankYou from "./pages/ThankYou";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar />
 
       <Routes>
@@ -33,7 +33,7 @@ function App() {
 
       <FloatingButtons />
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

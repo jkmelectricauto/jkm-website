@@ -4,18 +4,37 @@ function Dealership() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // 🚨 VERY IMPORTANT
+
     setLoading(true);
 
     const form = e.target;
 
-    const formData = new FormData(form);
+    const data = {
+      "form-name": "dealer-form",
+      full_name: form.full_name.value,
+      company_name: form.company_name.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      city: form.city.value,
+      requirement: form.requirement.value,
+    };
 
     try {
       await fetch("/", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data),
       });
 
       setSubmitted(true);
@@ -46,13 +65,6 @@ function Dealership() {
             Join JKM Electric Automobiles and expand your EV business with
             premium spare parts and OEM quality products.
           </p>
-
-          <div className="mt-8 space-y-4 text-gray-700">
-            <p>✓ High demand EV product category</p>
-            <p>✓ Strong margins for dealers</p>
-            <p>✓ All India expansion support</p>
-            <p>✓ Trusted manufacturing brand</p>
-          </div>
         </div>
 
         {/* Form */}
@@ -63,67 +75,26 @@ function Dealership() {
 
           <form
             name="dealer-form"
-            method="POST"
             data-netlify="true"
             onSubmit={handleSubmit}
             className="space-y-4"
           >
+            {/* REQUIRED for Netlify */}
             <input type="hidden" name="form-name" value="dealer-form" />
 
-            <input
-              type="text"
-              name="full_name"
-              placeholder="Full Name"
-              required
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            />
-
-            <input
-              type="text"
-              name="company_name"
-              placeholder="Company Name"
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            />
-
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              required
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            />
-
-            <input
-              type="text"
-              name="city"
-              placeholder="City / State"
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            />
-
-            <textarea
-              name="requirement"
-              placeholder="Your Requirement"
-              rows="4"
-              className="w-full border border-gray-200 p-4 rounded-xl"
-            ></textarea>
+            <input name="full_name" placeholder="Full Name" required className="w-full border p-4 rounded-xl" />
+            <input name="company_name" placeholder="Company Name" className="w-full border p-4 rounded-xl" />
+            <input name="phone" placeholder="Phone Number" required className="w-full border p-4 rounded-xl" />
+            <input name="email" placeholder="Email Address" className="w-full border p-4 rounded-xl" />
+            <input name="city" placeholder="City / State" className="w-full border p-4 rounded-xl" />
+            <textarea name="requirement" placeholder="Your Requirement" rows="4" className="w-full border p-4 rounded-xl"></textarea>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold"
+              className="w-full bg-blue-600 text-white py-4 rounded-xl"
             >
-              {loading
-                ? "Submitting..."
-                : submitted
-                ? "Submitted ✅"
-                : "Submit Inquiry"}
+              {loading ? "Submitting..." : submitted ? "Submitted ✅" : "Submit Inquiry"}
             </button>
           </form>
         </div>

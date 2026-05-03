@@ -40,7 +40,7 @@ function Dealership() {
             name="dealer-form"
             method="POST"
             data-netlify="true"
-            action="/thank-you"
+            action="/#/thank-you"   // ✅ FIXED HERE
             className="space-y-4"
           >
 
